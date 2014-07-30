@@ -1,0 +1,21 @@
+body{
+    /*overflow:hidden;*/
+}
+#page-overlay{
+    display:none;
+    padding-bottom:5px;
+    background-color: #777777;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1102;
+    filter: Alpha(opacity=70);
+    mozopacity: 0.7;
+    opacity: 0.7;
+}
+#fancybox-outer{background:none!important}
+.fancybox-bg{background:none!important;width:0px!important;height:0px!important}
+#fancybox-wrap { visibility: hidden; }
+#fancybox-close {
+    right: -50px;
+}

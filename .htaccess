@@ -1,0 +1,18 @@
+#AuthGroupFile /dev/null
+#AuthType Basic
+#AuthUserFile #/home/lifelydrea/domains/lifelydreamer.com/.htpasswd/public_html#/uat/.htpasswd
+#AuthName "Restricted Area"
+#require valid-user
+
+Options +FollowSymLinks
+IndexIgnore */*
+RewriteEngine on
+
+RewriteRule ^backend backend.php
+RewriteRule ^api api.php
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
